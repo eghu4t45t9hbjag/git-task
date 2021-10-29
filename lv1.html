@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      justify-content: space-between;
+
+       
+    }
+
+    span:nth-child(1){
+        width: 150px;
+        height: 120px;
+        border: 1px solid #f00;
+        
+    }
+    span:nth-child(2){
+        width: 150px;
+        height: 100px;
+        border: 1px solid #f00;
+        
+    }
+    span:nth-child(3){
+        width: 150px;
+        height: 40px;
+        border: 1px solid #f00;
+        margin-top: 20px;
+        
+    }
+    span:nth-child(4){
+        width: 150px;
+        height: 200px;
+        border: 1px solid #0f0;
+        
+    }
+    @media screen and (max-width: 640px) {
+    span:nth-child(4) {
+     order: -1;
+    }
+}
+@media screen and (max-width: 640px) {
+    .demo {
+        align-items: baseline;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="demo">
+     <span>1</span><span>2</span><span>3</span><span>4</span>
+    </div>
+</body>
+</html>
