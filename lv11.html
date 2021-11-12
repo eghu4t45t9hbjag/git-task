@@ -15,17 +15,20 @@
 
     }
     console.log(fac(10));
-
-    function fac1(n){
-        for(var i=1;i<=n;i++)
+    
+       function fac1(n){
+           for(var i=1;i<=n;++i)
         {
             var s=1;
-            s=s*i;
-            i++;
+            s*=i;
+        
         }
         return s;
-    }
-    console.log(fac(10));
+       }
+    
+    
+   var a = fac1(3);
+    console.log(a);
 </script>
 <body>
     
