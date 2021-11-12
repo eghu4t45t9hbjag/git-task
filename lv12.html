@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+var obj={
+        name:'zs',
+        age:18,
+        friends:['Kate','Bob','Mike'],
+        hobby:{
+            hobby1:'codes',
+            hobby2:'piano'
+        }
+    }
+   function clone(target){
+     const cloneTarget = {};//创建一个新的对象
+     for(var key in target){//遍历
+       cloneTarget[key] = target[key];//克隆原对象的所有属性
+     }
+     return cloneTarget;//返回克隆对象
+   };
+console.log(clone(obj));
+</script>
+<body>
+    
+</body>
+</html>
