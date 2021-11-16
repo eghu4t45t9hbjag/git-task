@@ -17,9 +17,13 @@
     console.log(fac(10));
     
        function fac1(n){
-           for(var i=1;i<=n;++i)
+           let s=1;
+           if(n===0)
+           return 1;
+           
+           for(let i=1;i<=n;++i)
         {
-            var s=1;
+            
             s*=i;
         
         }
@@ -27,8 +31,8 @@
        }
     
     
-   var a = fac1(3);
-    console.log(a);
+   
+    console.log(fac1(10));
 </script>
 <body>
     
