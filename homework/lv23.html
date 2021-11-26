@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box1{
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+    }
+    li{
+        list-style-type: none;
+    }
+</style>
+<body>
+   <div class="box">
+    <form>
+        
+       <div class="box1">
+           <ul id="ul">
+               </ul>
+       </div>
+        
+       <br>
+       <br>
+       <input type="text" id="pingLunQu" placeholder="请留言" />
+        <br>
+        <br>
+       <input type="button" id="button" value="发送" />
+    </form>
+    </div>
+   <script>
+       const button = document.getElementById("button");
+       button.onclick = function(){
+           const li = document.createElement("li");
+            const pingLunQu = document.getElementById("pingLunQu");
+           li.innerHTML = pingLunQu.value;
+           
+          const ul = document.getElementById("ul");
+          ul.appendChild(li);
+
+       }
+   </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box1{
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+    }
+    li{
+        list-style-type: none;
+    }
+</style>
+<body>
+   <div class="box">
+    <form>
+        
+       <div class="box1">
+           <ul id="ul">
+               </ul>
+       </div>
+        
+       <br>
+       <br>
+       <input type="text" id="pingLunQu" placeholder="请留言" />
+        <br>
+        <br>
+       <input type="button" id="button" value="发送" />
+       <input type="button" id="button1" style="background-color: red" />
+       <input type="button" id="button2" style="background-color: blue" />
+       <input type="button" id="button3" style="background-color: yellow" />
+       <input type="button" id="button4" style="background-color: pink" />
+   </form>
+    </form>
+    </div>
+   <script>
+       const button = document.getElementById("button");
+       button.onclick = function(){
+           const li = document.createElement("li");
+            const pingLunQu = document.getElementById("pingLunQu");
+           li.innerHTML = pingLunQu.value;
+           
+          const ul = document.getElementById("ul");
+          ul.appendChild(li);
+           const a = document.createElement("a");
+           var delText = document.createTextNode("delete");
+           a.appendChild(delText);
+           li.appendChild(a);
+           //向a中添加href属性
+           a.href = "javascript:;";
+            //为新添加的超链接设置单击响应函数
+            a.onclick = delA;
+ 
+
+
+        //删除li的响应函数
+        function delA(){
+            //获取li节点
+            const ul = document.getElementById("ul");
+            const flag = confirm("确认删除吗？");
+            if(flag){
+                ul.removeChild(li);
+            }
+            return false;
+
+        };
+
+       }
+       const button1 = document.getElementById("button1");
+       const button2 = document.getElementById("button2");
+       const button3 = document.getElementById("button3");
+       const button4 = document.getElementById("button4");
+       button1.onclick = function(){
+           document.getElementById("pingLunQu").style.color="red";
+       }
+       button2.onclick = function(){
+           document.getElementById("pingLunQu").style.color="blue";
+       }
+       button3.onclick = function(){
+           document.getElementById("pingLunQu").style.color="yellow";
+       }
+       button4.onclick = function(){
+           document.getElementById("pingLunQu").style.color="pink";
+       }
+   </script>
+   
+
+</body>
+</html>

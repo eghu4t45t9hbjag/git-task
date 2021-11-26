@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+   <script>
+      window.onload = function(){
+      var checkedAllBtn = document.getElementById("checkedAllBtn");
+      var checkedNoBtn = document.getElementById("checkedNoBtn");
+      var checkedRevBtn = document.getElementById("checkedRevBtn");
+      var items = document.getElementsByName("item");
+         checkedAllBtn.onclick = function(){
+         for(var i=0;i<items.length;i++){
+             items[i].checked = true;
+         }
+       }
+       checkedNoBtn.onclick = function(){
+         for(var i=0;i<items.length;i++){  
+             items[i].checked = false;
+       }
+       
+    }
+      checkedRevBtn.onclick = function(){
+          for(var i=0;i<items.length;i++){
+              items[i].checked = !items[i].checked;
+          }
+      }
+        };
+  </script>
+<body>
+
+    <div align="center">
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+
+    <div id="divlist" align="center">
+        <input type="checkbox" name="item" value="内卷">内卷
+        <input type="checkbox" name="item" value="疯狂内卷">疯狂内卷
+        <input type="checkbox" name="item" value="拼命内卷">拼命内卷
+        <input type="checkbox" name="item" value="使劲内卷">使劲内卷
+        <br />
+        <input type="button" id="checkedAllBtn" value="全选">
+        <input type="button" id="checkedNoBtn" value="全不选">
+        <input type="button" id="checkedRevBtn" value="反选">
+    </div>
+ 
+     
+      
+</body>
+
+</html>
