@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        #box1{
+           width: 100px;
+           height:100px ;
+           background-color: blueviolet;
+           border-radius: 50px;
+           position:absolute;
+        }
+        #box2{
+           width: 100px;
+           height:100px ;
+           background-color: rgb(75, 185, 236);
+           border-radius: 50px;
+           position:absolute;
+           top:109px;
+        }
+        #box3{
+           width: 100px;
+           height:100px ;
+           background-color: rgb(176, 247, 62);
+           border-radius: 50px;
+           position:absolute;
+           top:209px;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div id="box1"></div>
+    
+    <div id="box2"></div>
+    
+    <div id="box3"></div>
+    
+    <script>
+         
+
+          const timer1 = setInterval(function() {
+              const box1 = document.getElementById("box1");
+       if( box1.offsetLeft>=200)
+       {
+          clearInterval(timer1);
+         
+        
+       }
+       else{
+            box1.style.left = box1.offsetLeft + 2+"px";
+       }
+     },20);
+    
+    
+     setTimeout(function(){
+       const box2 = document.getElementById("box2");
+       const timer2 = setInterval(function(){
+        if( box2.offsetLeft>=200)
+       {
+           clearInterval(timer2);
+       }
+       else{
+            box2.style.left = box2.offsetLeft + 2+"px";
+       }
+     },20);
+     },2000);
+
+     setTimeout(function(){
+        const box3 = document.getElementById("box3");
+         const timer3 = setInterval(function(){
+       if( box3.offsetLeft>=200)
+       {
+           clearInterval(timer3);
+       }
+       else{
+            box3.style.left = box3.offsetLeft + 2+"px";
+       }
+     },20);
+    },4000);
+     
+
+
+    
+     
+
+
+    </script>
+</body>
+</html>
