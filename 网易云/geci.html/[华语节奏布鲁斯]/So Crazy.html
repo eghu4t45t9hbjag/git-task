@@ -7,9 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-   
+   <span style="display: block;font-size: xx-large;color: blueviolet;">So Crazy</span>
+   <img src="http://p4.music.126.net/dDgHDWlJAFwkMNrjbQExIA==/109951165959446596.jpg" width="300px" height="300px">
+    <div>
+        <audio controls="controls" loop="loop" class="musiccontrol">
+            <source src="http://m701.music.126.net/20220221191903/bc7fd29688836b406f0522dbc90aa696/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/12756835249/a954/4d7c/9334/fcd700cbf630bb55be5f9e5ab2fed283.mp3" class="musicsource">
+        </audio>
+    </div>
     <div id="geci">  
-          <span style="display: block;font-size: xx-large;color: blueviolet;">神探</span>
+          
     </div>
     
 
@@ -17,7 +23,7 @@
 <script>
 var geci = document.getElementById('geci')
     var xhr = new XMLHttpRequest();
-    xhr.open('get','http://redrock.udday.cn:2022/lyric?id=524152311');
+    xhr.open('get','http://redrock.udday.cn:2022/lyric?id=255016');
     xhr.send();
     xhr.onload = function(){
        var res = JSON.parse(xhr.responseText)

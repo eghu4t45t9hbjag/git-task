@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <span style="display: block;font-size: xx-large;color: blueviolet;">羊皮先生</span>
+   <img src="http://p4.music.126.net/fSfUOmOHyIpT-8eOU7JsLw==/109951165379497946.jpg" width="300px" height="300px">
+    <div>
+        <audio controls="controls" loop="loop" class="musiccontrol">
+            <source src="http://m701.music.126.net/20220221192220/564011f7e2fb4a7fbca6c4033c0e0345/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/4347368489/fa83/2856/dabf/8f7408022a560f4e5a28a30fdcbfbab3.mp3" class="musicsource">
+        </audio>
+    </div>
+    <div id="geci">  
+          
+    </div>
+    
+
+</body>
+<script>
+var geci = document.getElementById('geci')
+    var xhr = new XMLHttpRequest();
+    xhr.open('get','http://redrock.udday.cn:2022/lyric?id=1485891497');
+    xhr.send();
+    xhr.onload = function(){
+       var res = JSON.parse(xhr.responseText)
+       console.log(res)
+         var str = res.lrc.lyric
+       var arr = new Array()
+       var geci = document.getElementById('geci')
+       arr = str.split("\n")
+       for(var i=0;i<arr.length;i++){
+           var span = document.createElement('span')
+          span.innerHTML = arr[i]
+          var br = document.createElement('br')
+          geci.appendChild(span)
+          geci.appendChild(br)
+       }
+    }
+
+</script>
+</html>
+
+

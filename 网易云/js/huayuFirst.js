@@ -49,7 +49,7 @@ console.log(info); // 对象
 
           let id = res1.playlists[2].id
           let xhr2 = new XMLHttpRequest()
-          xhr2.open('get','http://redrock.udday.cn:2022/playlist/detail?id=7050074027')
+          xhr2.open('get','http://redrock.udday.cn:2022/playlist/detail?id=6703233707')
           xhr2.send()
           xhr2.onload = function(){
                 var res2 = JSON.parse(xhr2.responseText)

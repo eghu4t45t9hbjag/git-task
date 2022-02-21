@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <span style="display: block;font-size: xx-large;color: blueviolet;">街头艺术家</span>
+   <img src="http://p4.music.126.net/RKPyDWCG43iUFjM7WfzruA==/109951164567769090.jpg" width="300px" height="300px">
+    <div>
+        <audio controls="controls" loop="loop" class="musiccontrol">
+            <source src="http://m8.music.126.net/20220221191555/1e576d77c1d3553f8cb0d924c4c235d3/ymusic/0f0e/005e/035f/8dbf06011d748c462f4e455b5fb622b3.mp3" class="musicsource">
+        </audio>
+    </div>
+    <div id="geci">  
+          
+    </div>
+    
+
+</body>
+<script>
+var geci = document.getElementById('geci')
+    var xhr = new XMLHttpRequest();
+    xhr.open('get','http://redrock.udday.cn:2022/lyric?id=1410707639');
+    xhr.send();
+    xhr.onload = function(){
+       var res = JSON.parse(xhr.responseText)
+       console.log(res)
+         var str = res.lrc.lyric
+       var arr = new Array()
+       var geci = document.getElementById('geci')
+       arr = str.split("\n")
+       for(var i=0;i<arr.length;i++){
+           var span = document.createElement('span')
+          span.innerHTML = arr[i]
+          var br = document.createElement('br')
+          geci.appendChild(span)
+          geci.appendChild(br)
+       }
+    }
+
+</script>
+</html>
+
+

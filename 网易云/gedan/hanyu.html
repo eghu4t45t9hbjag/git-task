@@ -103,8 +103,6 @@
 	
     xhr.onload = function(){
         var res = JSON.parse(xhr.responseText)
-		console.log(res)
-        console.log(res.tags[2].name)
 		var tag = res.tags[2].name
 		    
 		    var div1 = document.getElementById('div1')

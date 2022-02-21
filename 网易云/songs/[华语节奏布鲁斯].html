@@ -47,22 +47,19 @@
             </div>
             <div id="songs">
                  <p style="font-size: larger; color: blue;">歌曲</p>  <br>  
-        <a href="#" id="a0">神探</a><br>
-        <a href="#" id="a1">飞</a><br>
-        <a href="#" id="a2">羊皮先生</a><br>
-        <a href="#" id="a3">流明</a><br>
-        <a href="#" id="a4">半途而废</a><br>
-        <a href="#" id="a5">什么跟什么有什么关系</a><br>
-        <a href="#" id="a6">So Crazy</a><br>
-        <a href="#" id="a7">街头艺术家</a><br>
-        <a href="#" id="a8">呼吸</a><br>
-        <a href="#" id="a9">如果我们当时一起会怎样</a><br>
-        <div id="geci">  
-            <p style="display: block;font-size: xx-large;color: blueviolet;" id="geciname"></p>
-      </div>
+        <a href="/geci.html/[华语节奏布鲁斯]/神探.html" id="a0">神探</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/飞.html" id="a1">飞</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/羊皮先生.html" id="a2">羊皮先生</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/流明.html" id="a3">流明</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/半途而废.html" id="a4">半途而废</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/什么跟什么有什么关系.html" id="a5">什么跟什么有什么关系</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/So Crazy.html" id="a6">So Crazy</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/街头艺术家.html" id="a7">街头艺术家</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/呼吸.html" id="a8">呼吸</a><br>
+        <a href="/geci.html/[华语节奏布鲁斯]/如果我们当时一起会怎么样.html" id="a9">如果我们当时一起会怎样</a><br>
      <div>
          <audio controls="controls" loop="loop" class="musiccontrol">
-             <source src="" class="musicsource">
+             <source src="http://m7.music.126.net/20220221191153/8edbd7bc8a3e57c88c415fc07f4e8425/ymusic/59dd/e550/fdbf/06df27c7a70d21c3b287e8c1ae97517a.mp3" class="musicsource">
          </audio>
      </div>
          <button id="btn1">上一首</button>
@@ -92,16 +89,16 @@
 
        var arr = new Array()
        var arr =[
-           'http://m8.music.126.net/20220220124853/4d544978df69da08787049289f3e7e5c/ymusic/59dd/e550/fdbf/06df27c7a70d21c3b287e8c1ae97517a.mp3',
-           'http://m801.music.126.net/20220220131756/251149a763bcd12b532625de9bad699c/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/9609908815/0959/f156/32b9/16b508f24093cde0ce0843fa21f88a70.mp3',
+           'http://m7.music.126.net/20220221191153/8edbd7bc8a3e57c88c415fc07f4e8425/ymusic/59dd/e550/fdbf/06df27c7a70d21c3b287e8c1ae97517a.mp3',
+           'http://m801.music.126.net/20220221191310/4d682bb2da8e40ae178e7bef243d119e/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/9609908815/0959/f156/32b9/16b508f24093cde0ce0843fa21f88a70.mp3',
            'http://m701.music.126.net/20220220114340/d66623c53ab65a96e612f91d1d13db55/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/4347368489/fa83/2856/dabf/8f7408022a560f4e5a28a30fdcbfbab3.mp3',
            'http://m701.music.126.net/20220220121708/dca71180c300cae18c0206cdeed73df9/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/8679063325/c134/448c/ff18/86a65d1ecca29595cc2047b792a0a96e.mp3',
-           "http://m702.music.126.net/20220220125020/31643d095816dfb0a5beeff4b3d0e174/jd-musicrep-ts/fdf2/fcf3/ae51/e5e3d126ff602bb55b462608626ed92b.mp3",
-           "http://m701.music.126.net/20220220114444/dc3af54dc0cdbf3e3ddf6f6afe9bfe69/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/4680581045/1b4f/a385/e426/24e5693099b3deaeeb7f7d883aadc910.mp3",
-           "http://m801.music.126.net/20220220125110/f194aa60340adddf086705c04ebc0840/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/12756835249/a954/4d7c/9334/fcd700cbf630bb55be5f9e5ab2fed283.mp3",
-           "http://m8.music.126.net/20220220114521/60955c87185012410eb5037ab0ff7860/ymusic/0f0e/005e/035f/8dbf06011d748c462f4e455b5fb622b3.mp3",
-           "http://m8.music.126.net/20220220122022/346cd2256656915ea9195566a9416133/ymusic/ts/free/8834bea373e2c0ec8dc572768272c7fa.mp3",
-           "http://m8.music.126.net/20220220125203/de3625479c3f6aacf118291a82a93086/ymusic/2b3c/dce8/9ef7/52cc045f0d4545e009ece0f8d32b0465.mp3",
+           "http://m802.music.126.net/20220221191508/48b5c3c14939d3e6816f47b202a052b0/jd-musicrep-ts/fdf2/fcf3/ae51/e5e3d126ff602bb55b462608626ed92b.mp3",
+           "http://m701.music.126.net/20220221191948/e64980ccf8c0f7d6179d91d532adefbb/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/4680581045/1b4f/a385/e426/24e5693099b3deaeeb7f7d883aadc910.mp3",
+           "http://m701.music.126.net/20220221191903/bc7fd29688836b406f0522dbc90aa696/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/12756835249/a954/4d7c/9334/fcd700cbf630bb55be5f9e5ab2fed283.mp3",
+           "http://m8.music.126.net/20220221191555/1e576d77c1d3553f8cb0d924c4c235d3/ymusic/0f0e/005e/035f/8dbf06011d748c462f4e455b5fb622b3.mp3",
+           "http://m8.music.126.net/20220221191812/04c69b81ff1572f7da774de6e4f47206/ymusic/ts/free/8834bea373e2c0ec8dc572768272c7fa.mp3",
+           "http://m8.music.126.net/20220221191717/8b287e889a1ec423a61afe08d765b5a4/ymusic/2b3c/dce8/9ef7/52cc045f0d4545e009ece0f8d32b0465.mp3",
         ] 
         
         let index = 0;
