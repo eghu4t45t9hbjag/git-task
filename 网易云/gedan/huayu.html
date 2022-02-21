@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="/css/wangyihun.css" rel="stylesheet">
+	<style>
+		#div2{
+			width: 800px;
+			height: 500px;
+            display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			
+			position: absolute;
+            left: 180px;
+			top:100px
+	
+			
+		}
+		#div1{
+			width: 100px;
+			height: 20px;
+		
+		}
+	</style>
+</head>
+<body>
+
+
+	<div class="topbox">
+        <div class="em"></div>
+        <img src="/img/logo.jpg"> 
+        <div class="logotitle"> 网易云音乐 </div>
+        <div><a href="/userwyh.html">发现音乐</a></div>
+        <div><a href="https://music.163.com/my/">我的音乐</a></div>
+        <div><a href="https://music.163.com/friend">关注</a></div>
+        <div><a href="https://music.163.com/store/product">商城</a></div>
+        <div><a href="https://music.163.com/musician/artist">音乐人</a></div>
+        <div><a href="https://music.163.com/download">下载客户端</a></div>
+
+
+        <div id="reserch" >
+            <img src="/img/reserch.png">
+           <input type="text"  placeholder="音乐/视频/电台/用户" style="outline: none;">
+        </div>
+
+        <div id="czzzx">
+            <p>创作者中心</p>
+        </div>
+        <button id="denglu">登录</button>
+        <p id="showname"></p>
+        <div class="em"></div>
+         <div class="nexttop">
+            <a class="gedan" href="/gedan.html">歌单</a>
+         </div>
+    </div>
+   
+         <div class="addback3"></div>
+         <div class="center">
+			 
+	         <div id="div2" style="z-index: auto  9999;"></div>
+             <div class="inside">
+                 <span id="div1"></span>
+             <button id="choice">选择分类</button>
+             <button id="hot">热门</button>
+             <br>
+             <br>
+             <hr color="red">
+             <div class="cato">
+                <table border="1">
+                    <thead>
+                            <tr id="category0"><th>语种</th></tr>
+                            <tr id="category1"><th>风格</th></tr>
+                            <tr id="category2"><th>场景</th></tr>
+                            <tr id="category3"><th>情感</th></tr>
+                            <tr id="category4"><th>主题</th></tr>
+                    </thead>
+        
+                </table>
+
+             </div>
+             <div id="hh"></div>
+             </div>
+             
+         </div>
+    
+    
+
+
+
+	
+	 
+	
+</body>
+<script>
+	
+    var xhr = new XMLHttpRequest()
+    xhr.open('get','http://redrock.udday.cn:2022/playlist/highquality/tags')
+    xhr.send()
+	
+    xhr.onload = function(){
+        var res = JSON.parse(xhr.responseText)
+		console.log(res)
+        console.log(res.tags[0].name)
+		var tag = res.tags[0].name
+		    
+		    var div1 = document.getElementById('div1')
+			var a = document.createElement('a')
+			a.innerHTML = res.tags[0].name
+			a.href = '#'
+			div1.appendChild(a)
+		
+
+		var xhr1 = new XMLHttpRequest()
+       xhr1.open('get','http://redrock.udday.cn:2022/top/playlist/highqualit?cat='+tag)
+       xhr1.send()
+        xhr1.onload = function(){
+			var res1 = JSON.parse(xhr1.responseText)
+			console.log(res1)
+			 var div2 = document.getElementById('div2')
+
+			for(var i=0;i<res1.playlists.length;i++){
+			 var div3 = document.createElement('div')
+			 div3.style.width='150px'
+			 div3.style.height='200px'
+             var img = document.createElement('img')
+			 var img1 = document.createElement('img')
+			 img1.style.width='20px'
+			 img1.style.width='20px'
+			 img1.src = '/img/earphone.png' 
+			 var div = document.createElement('div')
+			 div.style.width='100px'
+			 div.style.height='18px'
+			 div.style.backgroundColor='red'
+			 div.style.position='relative'
+			 div.style.top='100px'
+			 div3.appendChild(div)
+			 
+			 img.style.width='100px'
+			 img.style.height='100px'
+	         img.style.display='block'
+			 img.src = res1.playlists[i].coverImgUrl
+			 div3.appendChild(img)
+			  div.appendChild(img1)
+
+			 var b = document.createElement('a')
+			 b.innerHTML = res1.playlists[i].name
+			 b.href = '/songs/[流行点唱机].html'
+			 b.style.textDecoration='none'
+			 b.style.color = 'gray'
+			 div3.appendChild(b)
+
+            var span = document.createElement('span')
+			var number = res1.playlists[i].playCount%10000 + '万'
+			span.innerHTML = number
+
+			div.appendChild(span)
+             div2.appendChild(div3)
+			
+            
+
+			let id = res1.playlists[i].id
+			let xhr2 = new XMLHttpRequest()
+			xhr2.open('get','http://redrock.udday.cn:2022/playlist/detail?id='+id)
+			xhr2.send()
+			xhr2.onload = function(){
+                  var res2 = JSON.parse(xhr2.responseText)
+				  console.log(res2.playlist)
+
+			} 
+			}
+		}		
+	}
+
+
+
+
+    
+    
+
+
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span style="display: block;font-size: xx-large;color: blueviolet;">神探</span>
+    <audio id="audio" src="http://m8.music.126.net/20220220124853/4d544978df69da08787049289f3e7e5c/ymusic/59dd/e550/fdbf/06df27c7a70d21c3b287e8c1ae97517a.mp3" controls="controls" autoplay="true"></audio>
+    <div id="geci">
+       
+    </div>
+    
+
+</body>
+<script>
+var geci = document.getElementById('geci')
+    var xhr = new XMLHttpRequest();
+    xhr.open('get','http://redrock.udday.cn:2022/lyric?id=524152311');
+    xhr.send();
+    xhr.onload = function(){
+       var res = JSON.parse(xhr.responseText)
+       console.log(res)
+         var str = res.lrc.lyric
+       var arr = new Array()
+       var geci = document.getElementById('geci')
+       arr = str.split("\n")
+       for(var i=0;i<arr.length;i++){
+           var span = document.createElement('span')
+          span.innerHTML = arr[i]
+          var br = document.createElement('br')
+          geci.appendChild(span)
+          geci.appendChild(br)
+       }
+       var data = new Array()
+       data[0] = arr[0].substr("[",11)
+       data[1] = arr[1].substr("[",11)
+      
+       for(var i=2;i<arr.length;i++){
+           data[i] = arr[i].substr("[",10)
+       }
+        console.log(data)
+    }
+
+</script>
+</html>
+
+

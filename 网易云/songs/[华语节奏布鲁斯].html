@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="/css/wangyihun.css" rel="stylesheet">
+</head>
+<>
+
+
+    <div class="topbox">
+        <div class="em"></div>
+        <img src="/img/logo.jpg"> 
+        <div class="logotitle"> 网易云音乐 </div>
+        <div><a href="/userwyh.html">发现音乐</a></div>
+        <div><a href="https://music.163.com/my/">我的音乐</a></div>
+        <div><a href="https://music.163.com/friend">关注</a></div>
+        <div><a href="https://music.163.com/store/product">商城</a></div>
+        <div><a href="https://music.163.com/musician/artist">音乐人</a></div>
+        <div><a href="https://music.163.com/download">下载客户端</a></div>
+
+
+        <div id="reserch" >
+            <img src="/img/reserch.png">
+           <input type="text"  placeholder="音乐/视频/电台/用户" style="outline: none;">
+        </div>
+
+        <div id="czzzx">
+            <p>创作者中心</p>
+        </div>
+        <button id="denglu">登录</button>
+        <p id="showname"></p>
+        <div class="em"></div>
+         <div class="nexttop">
+            <a class="gedan" href="/gedan.html">歌单</a>
+         </div>
+    </div>
+   
+         <div class="addback3"></div>
+         <div class="center">
+             <div>
+                  <p id="name">[华语节奏布鲁斯] 情绪辗转反侧 雾气消散不开</p>
+             <img src="/img/gedan.png" id="biaoqian">
+             <img src="http://p2.music.126.net/_arG35AGceLJFvOG2g_ZLw==/109951165876026291.jpg" style="width: 200px;height: 200px;" id="img2"> 
+            </div>
+            <div id="songs">
+                 <p style="font-size: larger; color: blue;">歌曲</p>  <br>  
+        <a href="#" id="a0">神探</a><br>
+        <a href="#" id="a1">飞</a><br>
+        <a href="#" id="a2">羊皮先生</a><br>
+        <a href="#" id="a3">流明</a><br>
+        <a href="#" id="a4">半途而废</a><br>
+        <a href="#" id="a5">什么跟什么有什么关系</a><br>
+        <a href="#" id="a6">So Crazy</a><br>
+        <a href="#" id="a7">街头艺术家</a><br>
+        <a href="#" id="a8">呼吸</a><br>
+        <a href="#" id="a9">如果我们当时一起会怎样</a><br>
+        <div id="geci">  
+            <p style="display: block;font-size: xx-large;color: blueviolet;" id="geciname"></p>
+      </div>
+     <div>
+         <audio controls="controls" loop="loop" class="musiccontrol">
+             <source src="" class="musicsource">
+         </audio>
+     </div>
+         <button id="btn1">上一首</button>
+         <button id="btn2">下一首</button>
+    </div>
+
+    </div>
+    
+        
+   
+</body>
+<script>
+      musiccontrol=document.querySelector('.musiccontrol')    //对应audio标签
+      musicsource= document.querySelector('.musicsource')    //对应source标签
+
+      var a0 = document.getElementById('a0')
+      var a1 = document.getElementById('a1')
+      var a2 = document.getElementById('a2')
+      var a3 = document.getElementById('a3')
+      var a4 = document.getElementById('a4')
+      var a5 = document.getElementById('a5')
+      var a6 = document.getElementById('a6')
+      var a7 = document.getElementById('a7')
+      var a8 = document.getElementById('a8')
+      var a9 = document.getElementById('a9')
+      
+
+       var arr = new Array()
+       var arr =[
+           'http://m8.music.126.net/20220220124853/4d544978df69da08787049289f3e7e5c/ymusic/59dd/e550/fdbf/06df27c7a70d21c3b287e8c1ae97517a.mp3',
+           'http://m801.music.126.net/20220220131756/251149a763bcd12b532625de9bad699c/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/9609908815/0959/f156/32b9/16b508f24093cde0ce0843fa21f88a70.mp3',
+           'http://m701.music.126.net/20220220114340/d66623c53ab65a96e612f91d1d13db55/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/4347368489/fa83/2856/dabf/8f7408022a560f4e5a28a30fdcbfbab3.mp3',
+           'http://m701.music.126.net/20220220121708/dca71180c300cae18c0206cdeed73df9/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/8679063325/c134/448c/ff18/86a65d1ecca29595cc2047b792a0a96e.mp3',
+           "http://m702.music.126.net/20220220125020/31643d095816dfb0a5beeff4b3d0e174/jd-musicrep-ts/fdf2/fcf3/ae51/e5e3d126ff602bb55b462608626ed92b.mp3",
+           "http://m701.music.126.net/20220220114444/dc3af54dc0cdbf3e3ddf6f6afe9bfe69/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/4680581045/1b4f/a385/e426/24e5693099b3deaeeb7f7d883aadc910.mp3",
+           "http://m801.music.126.net/20220220125110/f194aa60340adddf086705c04ebc0840/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/12756835249/a954/4d7c/9334/fcd700cbf630bb55be5f9e5ab2fed283.mp3",
+           "http://m8.music.126.net/20220220114521/60955c87185012410eb5037ab0ff7860/ymusic/0f0e/005e/035f/8dbf06011d748c462f4e455b5fb622b3.mp3",
+           "http://m8.music.126.net/20220220122022/346cd2256656915ea9195566a9416133/ymusic/ts/free/8834bea373e2c0ec8dc572768272c7fa.mp3",
+           "http://m8.music.126.net/20220220125203/de3625479c3f6aacf118291a82a93086/ymusic/2b3c/dce8/9ef7/52cc045f0d4545e009ece0f8d32b0465.mp3",
+        ] 
+        
+        let index = 0;
+      
+       a0.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src = arr[0]
+          index = 0
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a1.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src = arr[1]
+          index = 1
+          console.log(index)
+          musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a2.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src = arr[2]
+          index = 2
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a3.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src= arr[3]
+          index = 3
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a4.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src= arr[4]
+          index = 4
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a5.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src=arr[5]
+          index = 5
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a6.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src=arr[6]
+          index = 6
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a7.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src=arr[7]
+          index = 7
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a8.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src=arr[8]
+          index = 8
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+      a9.onclick = function(){
+          musiccontrol.pause()
+          musicsource.src=arr[9]
+          index = 9
+          console.log(index)
+	      musiccontrol.load()
+	      musiccontrol.play()
+      }
+
+       
+
+     
+      var a = document.querySelectorAll('a')
+      var btn1 = document.getElementById('btn1')
+      var btn2 = document.getElementById('btn2')
+      btn1.onclick = function changemusic(){
+          musiccontrol.pause()
+          if(index<0){
+              index = 9
+          }
+          else{
+              index--
+          }
+          console.log(index)
+          musicsource.src=arr[index]
+	      musiccontrol.load()
+	      musiccontrol.play()
+    }
+      btn2.onclick = function changemusic(){
+        musiccontrol.pause()
+          if(index>=9){
+              index = 0
+          }
+          else{
+              index++
+          }
+          console.log(index)
+          musicsource.src=arr[index]
+	      musiccontrol.load()
+	      musiccontrol.play()
+    }
+    
+   
+
+
+    const btn = document.getElementById("denglu")
+btn.onclick = function(){
+    window.location.href = '/login.html' 
+};
+
+// 获取到我们传过来的参数  接收参数
+let id = window.location.search.slice(1);
+console.log(id);
+// 应为我们是把本地存储数据的长度来当做id的所有我们可以通过id获取说有的数据
+let key = localStorage.key(id); // 获取对应的key钥匙
+let data = localStorage.getItem(key); // 再通过key获取对应的数据
+console.log(data); // 这是是字符串
+let info = JSON.parse(data) // 将字符串转换为对象
+console.log(info); // 对象
+
+    // 获取昵称
+    var nickname = document.getElementById("showname")
+    nickname.innerText = info.name+'    您好!'
+  if(nickname.innerText = info.name+'    您好!'){
+      btn.style.display='none'
+  }
+
+console.log(index)
+var arr1 = new Array()
+       arr1=[
+{name:'神探',id:524152311},
+{name: '飞', id: 1871868390},
+{name: '羊皮先生', id: 1485891497},
+{name: '流明', id: 1309394989},
+{name: '半途而废', id: 299910},
+{name: '什么跟什么有什么关系', id: 1492319444},
+{name: 'So Crazy', id: 255016},
+{name: '街头艺术家', id: 1410707639},
+{name: '呼吸', id: 255879},
+{name: '如果我们当时一起会怎么样', id: 525240762}
+       ]
+
+     console.log(arr1[5].id)
+     console.log(arr1[5].name)
+    
+    var geci = document.getElementById('geci')
+    var xhr = new XMLHttpRequest();
+    xhr.open('get','http://redrock.udday.cn:2022/lyric?id='+arr1[index].id);
+    xhr.send();
+    xhr.onload = function(){
+       var res = JSON.parse(xhr.responseText)
+       console.log(res)
+        var geciname = document.getElementById('geciname')
+        geciname.innerText = arr1[index].name
+       
+         var str = res.lrc.lyric
+       var arr = new Array()
+       var geci = document.getElementById('geci')
+       arr = str.split("\n")
+       for(var i=0;i<arr.length;i++){
+           var span = document.createElement('span')
+          span.innerHTML = arr[i]
+          var br = document.createElement('br')
+          geci.appendChild(span)
+          geci.appendChild(br)
+       }
+
+       
+
+    }
+</script>
+</html>

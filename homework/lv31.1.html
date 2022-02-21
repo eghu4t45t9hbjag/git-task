@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        #box1{
+           width: 100px;
+           height:100px ;
+           background-color: blueviolet;
+           border-radius: 50px;
+           position:absolute;
+        }
+        #box2{
+           width: 100px;
+           height:100px ;
+           background-color: rgb(75, 185, 236);
+           border-radius: 50px;
+           position:absolute;
+           top:109px;
+        }
+        #box3{
+           width: 100px;
+           height:100px ;
+           background-color: rgb(176, 247, 62);
+           border-radius: 50px;
+           position:absolute;
+           top:209px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    
+    <div id="box2"></div>
+    
+    <div id="box3"></div>
+   <script>
+
+        const timer1 = setInterval( fun1 = function() {
+        const box1 = document.getElementById("box1");
+       if( box1.offsetLeft>=200)
+       {
+          clearInterval(timer1);
+         
+       }
+       else{
+            box1.style.left = box1.offsetLeft + 2+"px";
+       }
+     },20);
+
+
+
+let p = new Promise((resolve, reject) => {
+  //做一些异步操作
+  setTimeout(() => {
+    const box2 = document.getElementById("box2");
+       const timer2 = setInterval(function(){
+        if( box2.offsetLeft>=200)
+       {
+           clearInterval(timer2);
+       }
+       else{
+            box2.style.left = box2.offsetLeft + 2+"px";
+       }
+     },20);
+    resolve(box3);
+  }, 2000);
+})
+  .then(
+    (data) => {
+
+
+        setTimeout(function(){
+        const box3 = document.getElementById("box3");
+         const timer3 = setInterval(function(){
+       if( box3.offsetLeft>=200)
+       {
+           clearInterval(timer3);
+       }
+       else{
+            box3.style.left = box3.offsetLeft + 2+"px";
+       }
+     },20);
+    },4000);
+
+
+      return data;
+      //此时输出data为resolve传入的参数
+    },
+    (error) => {
+      console.log(error);
+      //此时输出error为reject传入的参数
+    }
+  )
+  .then((data) => {
+    console.log(data);
+    return data;
+    //好耶
+  })
+  .then((data) => {
+    console.log(data);
+    //好耶
+  })
+  .then((data) => {
+    console.log(data);
+    //undefined
+  })
+  .catch((error) => {
+    console.log(data);
+  });
+
+  
+
+
+ </script>
+
+</body>
+</html>

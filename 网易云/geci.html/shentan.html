@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div id="geci">  
+          <span style="display: block;font-size: xx-large;color: blueviolet;">神探</span>
+    </div>
+    
+
+</body>
+<script>
+var geci = document.getElementById('geci')
+    var xhr = new XMLHttpRequest();
+    xhr.open('get','http://redrock.udday.cn:2022/lyric?id=524152311');
+    xhr.send();
+    xhr.onload = function(){
+       var res = JSON.parse(xhr.responseText)
+       console.log(res)
+         var str = res.lrc.lyric
+       var arr = new Array()
+       var geci = document.getElementById('geci')
+       arr = str.split("\n")
+       for(var i=0;i<arr.length;i++){
+           var span = document.createElement('span')
+          span.innerHTML = arr[i]
+          var br = document.createElement('br')
+          geci.appendChild(span)
+          geci.appendChild(br)
+       }
+    }
+
+</script>
+</html>
+
+

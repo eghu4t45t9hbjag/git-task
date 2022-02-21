@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+      #box1{
+           width: 100px;
+           height:100px ;
+           background-color: blueviolet;
+           border-radius: 50px;
+           position:absolute;
+        }
+        #box2{
+           width: 100px;
+           height:100px ;
+           background-color: rgb(75, 185, 236);
+           border-radius: 50px;
+           position:absolute;
+           top:109px;
+        }
+        #box3{
+           width: 100px;
+           height:100px ;
+           background-color: rgb(176, 247, 62);
+           border-radius: 50px;
+           position:absolute;
+           top:209px;
+        }
+</style>
+
+</head>
+<body>
+    <div id="box1"></div>
+    
+    <div id="box2"></div>
+    
+    <div id="box3"></div>
+
+    <script>
+
+            const timer1 = setInterval(function() {
+              const box1 = document.getElementById("box1");
+       if( box1.offsetLeft>=200)
+       {
+          clearInterval(timer1);
+         
+        
+       }
+       else{
+            box1.style.left = box1.offsetLeft + 2+"px";
+       }
+     },20);
+
+
+
+      const box2 = document.getElementById("box2");
+      const timer2 = setInterval(function fun1(){
+        if( box2.offsetLeft>=200)
+       {
+           clearInterval(timer2);
+           return timer2;
+       }
+       else{
+            box2.style.left = box2.offsetLeft + 2+"px";
+            return timer2;
+       }
+     },20);
+
+
+
+        let step = (time) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(fun1());
+    }, time);
+  });
+};
+async function demo() {
+  let word1 = await step(2000);
+  fun1() //在红岩学技术太有趣了！
+  let word2 = await step(1000);
+  console.log(word2);//在红岩学技术太有趣了！
+  let word3 = await step(1500);
+  return "函数执行完成";
+}
+demo().then((res) => {
+  console.log(res);//函数执行完成
+});
+    </script>
+</body>
+</html>
