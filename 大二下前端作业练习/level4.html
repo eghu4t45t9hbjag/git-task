@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+            height: 500%;
+        }
+</style>
+<body>
+    
+</body>
+<script>
+
+/*//Array.prototype.map
+Array.prototype.map = function(fn, context){
+
+    let resArr = []
+
+    const me = this
+
+    const ctx = context ? context : me
+
+    if(typeof fn !== 'function'){
+        throw new Error(`${fn} is not a function`)
+    }
+
+   me.forEach((item,index)=>{
+       resArr.push(fn.call(ctx,item,index,me))//将回调结果放入数组中
+   })
+
+   return resArr
+}
+
+//检验map
+let arr = [1,2,3]
+let arr1 = arr.map(function(a,b,c,){
+    console.log(this,a,b,c)
+    return a+1
+})
+ console.log(arr1)
+
+    //检查报错
+ let arr2 = arr.map(123,arr)
+ console.log(arr2)
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+ //Array.prototype.filter
+ Array.prototype.filter = function(fn,thisArr){
+
+     if(typeof fn !=='function'){
+         throw new Error(`${fn} is not a function`)
+     }
+
+    let resArr = []
+
+    for(let i=0;i<this.length;i++){
+        let exit = fn.call(thisArr,this[i],i,this)
+        exit && resArr.push(this[i])
+    }
+
+    return resArr
+
+ }
+
+//检验
+ function isBigEnough(element) {
+  return element >= 10;
+}
+let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+
+console.log(filtered)
+ //报错
+ let a = [12, 5, 8, 130, 44].filter('555');
+ console.log(a)
+*/
+
+
+
+
+
+
+
+
+
+
+//Array.prototype.reduce
+Array.prototype.reduce = function(fn, init){
+    if(typeof fn !== 'function'){
+        throw new Error(`${fn} is not a function`)
+    }
+    let css = init || this[0]
+    let startIndex = init ? 0 : 1
+    for(let i = startIndex; i< this.length;i++){
+        css = fn(css, this[i], i, this)
+    }
+    return css
+}
+
+const arr = [1, 2, 3, 4];
+
+let arr1 = arr.reduce((total, cur) => total + cur);
+let arr2 = arr.reduce((total, cur) => total + cur, 10); 
+console.log(arr1)
+console.log(arr2)
+let arr3 = arr.reduce("555"); 
+console.log(arr3)
+
+
+
+
+</script>
+</html>

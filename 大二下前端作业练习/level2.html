@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   防抖： <input type="text" id="input">
+   节流： <input type="text" id="input1"> 
+</body>
+<script>
+    //防抖
+    function debounce(fn,delay) {
+        //记录上一次的计时器
+        let timer = null;
+        return function(){
+           let args = arguments
+            //清除上一次的计时器
+            clearTimeout(timer)
+            timer = setTimeout(function(){
+                fn.apply(this,args)
+            },delay)
+        }
+    }
+   
+
+     let input = document.getElementById('input')
+     input.oninput =  debounce(function(){
+         
+         console.log(input.value)
+     },3000)
+
+     //节流
+     function throttle(fn,delay) {
+       //记录上一次触发的时间
+       let lastTime = 0;
+       return function(){
+          let  args = arguments;
+           //记录当前函数触发的时间
+           let nowTime = Date.now();
+           if(nowTime - lastTime > delay){
+               //修正this问题
+               fn.apply(this,args);
+               //同步时间
+               lastTime = nowTime;
+           }
+       }
+    }
+    let input1 = document.getElementById('input1')
+   input1.oninput = throttle(function () {
+        console.log(input1.value);
+    },2000)
+</script>
+</html>
