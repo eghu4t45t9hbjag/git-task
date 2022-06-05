@@ -1,0 +1,333 @@
+@import "common";
+body{
+    min-width: 320px;
+    height: 15rem;
+    margin: 0 auto;
+    font-family: -apple-system, sans-serif;
+    background: #fafafa;
+}
+@baseFont:50;
+
+//去除滚动条
+
+::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+//头部固定部分
+
+.all-Head{
+    
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.04);;
+}
+
+
+//头部
+
+.head{
+    height: (131rem / @baseFont);
+    padding: 0 (34rem / @baseFont) 0 (38rem / @baseFont);
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+.head-logo{
+        width: (80rem / @baseFont);
+        height: (80rem / @baseFont);
+        vertical-align: middle;
+        text-align: center;
+        margin-right: (15rem / @baseFont);
+    img{
+        width: (61rem / @baseFont);
+        height: (61rem / @baseFont);
+    }
+}
+.head-title{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: justify;
+    h2{
+        padding-right: 0%;
+        width: (573rem / @baseFont);
+        height: (62rem / @baseFont);
+        font-size: (41rem / @baseFont);
+        font-weight: 500;
+    }
+    p{
+        padding-right: 0%;
+        width: (573rem / @baseFont);
+        height: (47rem / @baseFont);
+        font-size: (30rem / @baseFont);
+        color: #808080;
+        font-weight: 345;
+    }
+}
+.head-load{
+    width:(218rem / @baseFont) ;
+    height: (62rem / @baseFont);
+    line-height: 2;
+    text-align: center;
+    margin-right:(10rem / @baseFont);
+    color: #575656;
+    font-size: (34rem / @baseFont);
+    font-weight: 300;
+    border: 1px solid #dfdfdf;
+    border-radius: (99rem / @baseFont);
+}
+
+
+//推荐排行
+
+
+.second-head{
+    display: flex;
+    flex: left;
+    height: (109rem / @baseFont);
+    text-align: center;
+    line-height: 2.4;
+    color: #1A1A1A80;
+    font-weight: 300;
+}
+.recommend{
+    font-size: (41.3rem / @baseFont);
+    width: 50%;
+    color: #22D59C;
+}
+.ranking{
+    font-size: (41.3rem / @baseFont);
+    width: 50%;
+}
+#bottomLine{
+    border-radius:(25.3rem / @baseFont) (25.3rem / @baseFont) (25.3rem / @baseFont) (25.3rem / @baseFont);
+    position:absolute;
+    left: 43.5%;
+}
+#bottomLine1{
+    display: none;
+    border-radius:(25.3rem / @baseFont) (25.3rem / @baseFont) (25.3rem / @baseFont) (25.3rem / @baseFont);
+    position:absolute;
+    right: 22.5%;
+}
+//搜索
+
+.research{
+    width:100% ;
+    height:(78rem / @baseFont) ;
+    margin-top: (41.3rem / @baseFont);
+    position: relative;
+    img{
+         position: absolute;
+         top: (13rem / @baseFont);
+         left: (325rem / @baseFont);
+         width: (55.3rem / @baseFont);
+         height: (53rem / @baseFont);
+    }
+}
+.search-bar{
+    border: none;
+    outline: none;
+    width: (890rem / @baseFont);
+    height: (78rem / @baseFont);
+    position:absolute;
+    left: (42rem / @baseFont);
+    text-align: center;
+    font-size:x-large;
+    font-weight: 200;
+    color: #8c8c8c;
+}
+
+
+//官方歌单
+
+
+.off-songList-head{
+    position: relative;
+    h2{
+        width: (890rem / @baseFont);
+        height: (78rem / @baseFont);
+        margin: (52rem / @baseFont) (41rem / @baseFont) (26rem / @baseFont);
+        font-size: (46rem / @baseFont);
+    }
+    a{
+        position: absolute;
+        right: 3%;
+        top:30%;
+        color: #b6b6b6;
+        font-size:(20rem / @baseFont);
+        font-weight: 250;
+    }   
+}
+
+.songList{
+    width: (974rem / @baseFont);
+    height: (349rem / @baseFont);
+    margin: 0rem 0rem (-26rem / @baseFont);
+    padding:(26rem / @baseFont) 0rem ;
+    overflow: scroll;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-flow: row;
+    div{
+        width: (284rem / @baseFont);
+        height: (284rem / @baseFont);
+        img{
+            width: (284rem / @baseFont);
+             height: (284rem / @baseFont);
+           }      
+    }
+}
+.list5{
+    width: (284rem / @baseFont);
+    height: (284rem / @baseFont);
+    margin-right: (31.2rem / @baseFont);
+        
+}
+
+
+//达人歌单
+
+
+.people-songList-head{
+    position: relative;
+    h2{
+        width: (890rem / @baseFont);
+        height: (78rem / @baseFont);
+        margin: (52rem / @baseFont) (41rem / @baseFont) (26rem / @baseFont);
+        font-size: (46rem / @baseFont);
+    }
+    a{
+        position: absolute;
+        right: 3%;
+        top:5%;
+        color: #b6b6b6;
+        font-size:(20rem / @baseFont);
+        font-weight: 250;
+    }   
+}
+.psongList{
+    width: (974rem / @baseFont);
+    height: (392rem / @baseFont);
+    margin: 0rem 0rem (-26rem / @baseFont);
+    padding:(26rem / @baseFont) 0rem ;
+    overflow: scroll;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    div{
+        width: (284rem / @baseFont);
+        height: (284rem / @baseFont);
+        img{
+            width: (284rem / @baseFont);
+             height: (284rem / @baseFont);
+        }
+    }
+}
+.plist5{
+         margin-right: (31.2rem / @baseFont);
+}
+//专区
+
+.section-songList-head{
+    position: relative;
+    h2{
+        width: (890rem / @baseFont);
+        height: (78rem / @baseFont);
+        margin: (52rem / @baseFont) (41rem / @baseFont) (26rem / @baseFont);
+        font-size: (46rem / @baseFont);
+    }
+    a{
+        position: absolute;
+        right: 3%;
+        top:5%;
+        color: #b6b6b6;
+        font-size:(20rem / @baseFont);
+        font-weight: 250;
+    }   
+}
+.ssongList{
+    width: (974rem / @baseFont);
+    height: (395rem / @baseFont);
+    margin: 0rem 0rem (-26rem / @baseFont);
+    padding:(26rem / @baseFont) 0rem ;
+    overflow: scroll;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    div{
+        width: (587rem / @baseFont);
+        height: (330rem / @baseFont);
+        img{
+            width: (587rem / @baseFont);
+             height: (330rem / @baseFont);
+             margin-left: 10%;
+           } 
+    }
+}
+.slist5{
+         margin-right: (31.2rem / @baseFont);
+}
+
+//底部栏
+
+.copyright{
+    width: (974rem / @baseFont);
+    height: (260rem / @baseFont);
+    margin: (78rem / @baseFont) 0rem 0rem;
+    padding: (41.6rem / @baseFont) 0rem;
+    text-align: center;
+     img{
+      width: (206.7rem / @baseFont);
+      height: (57rem / @baseFont);
+      margin-bottom:(15rem / @baseFont);
+    }
+    p{
+        width: (974rem / @baseFont);
+        height:(46.7rem / @baseFont);
+        font-size:(31.2rem / @baseFont);
+        font-weight: 300;
+        color: #1A1A1A;
+    }
+}
+.load-QQmusic{
+    width: (974rem / @baseFont);
+    height: (200rem / @baseFont);
+   // padding: (41.5rem / @baseFont);
+    a{   
+         display: block;
+         width: (533rem / @baseFont);
+         height: (117rem / @baseFont);
+         position: relative;
+         left: 23%;
+         border-radius: (200rem / @baseFont);
+         box-shadow: 0 3px 25px rgb(0 0 0 / 5%);
+         
+        p{
+             width: (373.7rem / @baseFont);
+             height: (46.7rem / @baseFont);
+             color: #1A1A1A;
+             font-size: (31.2rem / @baseFont);
+             font-weight: 300;
+             position: absolute;
+             top: 30%;
+             left: 20%;
+        }
+        div{
+            width:(57.1rem / @baseFont) ;
+            height: (57.1rem / @baseFont);
+            position: absolute;
+            left: 5%;
+            top: 20%;
+            img{
+            width: (57rem / @baseFont);
+            height: (57rem / @baseFont);
+         }
+        }
+        
+    }
+}

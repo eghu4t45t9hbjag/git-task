@@ -1,0 +1,349 @@
+html {
+  font-size: 50px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 22.5px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 23.4375px;
+  }
+}
+@media screen and (min-width: 384px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 25.875px;
+  }
+}
+@media screen and (min-width: 424px) {
+  html {
+    font-size: 26.5px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 33.75px;
+  }
+}
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 46.875px;
+  }
+}
+body {
+  min-width: 320px;
+  height: 15rem;
+  margin: 0 auto;
+  font-family: -apple-system, sans-serif;
+  background: #fafafa;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.all-Head {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.04);
+}
+.head {
+  height: 2.62rem;
+  padding: 0 0.68rem 0 0.76rem;
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
+.head-logo {
+  width: 1.6rem;
+  height: 1.6rem;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 0.3rem;
+}
+.head-logo img {
+  width: 1.22rem;
+  height: 1.22rem;
+}
+.head-title {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+}
+.head-title h2 {
+  padding-right: 0%;
+  width: 11.46rem;
+  height: 1.24rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+.head-title p {
+  padding-right: 0%;
+  width: 11.46rem;
+  height: 0.94rem;
+  font-size: 0.6rem;
+  color: #808080;
+  font-weight: 345;
+}
+.head-load {
+  width: 4.36rem;
+  height: 1.24rem;
+  line-height: 2;
+  text-align: center;
+  margin-right: 0.2rem;
+  color: #575656;
+  font-size: 0.68rem;
+  font-weight: 300;
+  border: 1px solid #dfdfdf;
+  border-radius: 1.98rem;
+}
+.second-head {
+  display: flex;
+  flex: left;
+  height: 2.18rem;
+  text-align: center;
+  line-height: 2.4;
+  color: #1A1A1A80;
+  font-weight: 300;
+}
+.recommend {
+  font-size: 0.826rem;
+  width: 50%;
+  color: #22D59C;
+}
+.ranking {
+  font-size: 0.826rem;
+  width: 50%;
+}
+#bottomLine {
+  border-radius: 0.506rem 0.506rem 0.506rem 0.506rem;
+  position: absolute;
+  left: 43.5%;
+}
+#bottomLine1 {
+  display: none;
+  border-radius: 0.506rem 0.506rem 0.506rem 0.506rem;
+  position: absolute;
+  right: 22.5%;
+}
+.research {
+  width: 100% ;
+  height: 1.56rem;
+  margin-top: 0.826rem;
+  position: relative;
+}
+.research img {
+  position: absolute;
+  top: 0.26rem;
+  left: 6.5rem;
+  width: 1.106rem;
+  height: 1.06rem;
+}
+.search-bar {
+  border: none;
+  outline: none;
+  width: 17.8rem;
+  height: 1.56rem;
+  position: absolute;
+  left: 0.84rem;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 200;
+  color: #8c8c8c;
+}
+.off-songList-head {
+  position: relative;
+}
+.off-songList-head h2 {
+  width: 17.8rem;
+  height: 1.56rem;
+  margin: 1.04rem 0.82rem 0.52rem;
+  font-size: 0.92rem;
+}
+.off-songList-head a {
+  position: absolute;
+  right: 3%;
+  top: 30%;
+  color: #b6b6b6;
+  font-size: 0.4rem;
+  font-weight: 250;
+}
+.songList {
+  width: 19.48rem;
+  height: 6.98rem;
+  margin: 0rem 0rem -0.52rem;
+  padding: 0.52rem 0rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-flow: row;
+}
+.songList div {
+  width: 5.68rem;
+  height: 5.68rem;
+}
+.songList div img {
+  width: 5.68rem;
+  height: 5.68rem;
+}
+.list5 {
+  width: 5.68rem;
+  height: 5.68rem;
+  margin-right: 0.624rem;
+}
+.people-songList-head {
+  position: relative;
+}
+.people-songList-head h2 {
+  width: 17.8rem;
+  height: 1.56rem;
+  margin: 1.04rem 0.82rem 0.52rem;
+  font-size: 0.92rem;
+}
+.people-songList-head a {
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  color: #b6b6b6;
+  font-size: 0.4rem;
+  font-weight: 250;
+}
+.psongList {
+  width: 19.48rem;
+  height: 7.84rem;
+  margin: 0rem 0rem -0.52rem;
+  padding: 0.52rem 0rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.psongList div {
+  width: 5.68rem;
+  height: 5.68rem;
+}
+.psongList div img {
+  width: 5.68rem;
+  height: 5.68rem;
+}
+.plist5 {
+  margin-right: 0.624rem;
+}
+.section-songList-head {
+  position: relative;
+}
+.section-songList-head h2 {
+  width: 17.8rem;
+  height: 1.56rem;
+  margin: 1.04rem 0.82rem 0.52rem;
+  font-size: 0.92rem;
+}
+.section-songList-head a {
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  color: #b6b6b6;
+  font-size: 0.4rem;
+  font-weight: 250;
+}
+.ssongList {
+  width: 19.48rem;
+  height: 7.9rem;
+  margin: 0rem 0rem -0.52rem;
+  padding: 0.52rem 0rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.ssongList div {
+  width: 11.74rem;
+  height: 6.6rem;
+}
+.ssongList div img {
+  width: 11.74rem;
+  height: 6.6rem;
+  margin-left: 10%;
+}
+.slist5 {
+  margin-right: 0.624rem;
+}
+.copyright {
+  width: 19.48rem;
+  height: 5.2rem;
+  margin: 1.56rem 0rem 0rem;
+  padding: 0.832rem 0rem;
+  text-align: center;
+}
+.copyright img {
+  width: 4.134rem;
+  height: 1.14rem;
+  margin-bottom: 0.3rem;
+}
+.copyright p {
+  width: 19.48rem;
+  height: 0.934rem;
+  font-size: 0.624rem;
+  font-weight: 300;
+  color: #1A1A1A;
+}
+.load-QQmusic {
+  width: 19.48rem;
+  height: 4rem;
+}
+.load-QQmusic a {
+  display: block;
+  width: 10.66rem;
+  height: 2.34rem;
+  position: relative;
+  left: 23%;
+  border-radius: 4rem;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.05);
+}
+.load-QQmusic a p {
+  width: 7.474rem;
+  height: 0.934rem;
+  color: #1A1A1A;
+  font-size: 0.624rem;
+  font-weight: 300;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.load-QQmusic a div {
+  width: 1.142rem;
+  height: 1.142rem;
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+.load-QQmusic a div img {
+  width: 1.14rem;
+  height: 1.14rem;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script src="/js/search.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+     <!--头部固定部分-->
+ <div class="all-Head">
+
+    <!--头部-->
+     <div class="head">
+        <div class="head-logo"><img src="/images/logo.svg"></div>
+       <div class="head-title">
+           <h2>QQ音乐</h2>
+            <p>打开APP收藏下载</p>
+        </div>
+        <div class="head-load">下载APP</div>
+     </div>
+
+    <!--推荐，排行-->
+    <div class="second-head">
+        <div class="recommend">推荐</div>
+       <div class="ranking">排行</div>
+</div>
+</div>
+
+
+<!--搜索-->
+<div class="research">
+    <div class="search1">
+    <input type="search" class="search-bar" placeholder="搜索">
+    <img src="/images/搜索.png">
+   </div>
+    <div class="search2" style="display:none;">
+    <input type="search" class="search-bar2" placeholder="搜索" />
+    
+    <img src="/images/搜索.png" />
+
+    <div class="chacha"><img src="/images/叉叉.png" style="width: 20px; height: 20px;"  /></div>
+    
+    </div>
+    <span>取消</span>
+</div>
+
+
+<!--搜索显示歌曲和演唱者-->
+<div class="songsShow" style="display: none;"></div>
+
+
+<div class="hot-his">
+<!--搜索内容(热门搜索+搜索历史)-->
+<section class="allSearch">
+    <div class="hotSearch1">
+        <h2 class="hisSearch">搜索历史</h2>
+
+        <div class="dustbin">
+            <img src="/images/垃圾箱.png"/>
+        </div>
+
+       <!--<div class="hisSearch-content"> hhhhhh</div>--> 
+    </div>
+    <div class="hotSearch2">
+        <h2 class="hotSearch-title">热门搜索</h2>
+        <section class="hotSearch-content"></section>
+    </div>
+</section>
+</div>
+
+<!--底部栏-->
+<div class="copyright">
+    <img src="/images/copyright-img.svg" />
+    <p>Copyright © 1998 - 2019 Tencent. All Rights Reserved.</p>
+    <p>联系电话:0755-86013388 QQ群:55209235</p>
+</div>
+<div class="load-QQmusic">
+<a href="#">
+   <div>
+     <img src="/images/logo1.svg">
+   </div>
+   <p>安装QQ音乐 发现更多精彩</p>
+</a>
+</div>
+</body>
+</html>

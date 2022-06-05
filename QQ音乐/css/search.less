@@ -1,0 +1,313 @@
+@import "common";
+body{
+    min-width: 320px;
+    height: 15rem;
+    margin: 0 auto;
+    font-family: -apple-system, sans-serif;
+    background: #fafafa;
+}
+@baseFont:50;
+
+
+//搜索框叉叉的设置
+
+input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+   position: relative;
+   right: 3%;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   background: url("/images/叉叉.png") no-repeat center;
+   background-size: 100% 100%;
+    color:rgba(0,0,0,0);
+    z-index: 2;
+}
+/*input[type=search]::-ms-clear {
+    appearance: none;
+    position: relative;
+    right: 3%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+   background: url("/images/叉叉.png") no-repeat center;
+   background-size: 100% 100%;
+   color:rgba(0,0,0,0);
+}*/
+
+
+//头部固定部分
+
+.all-Head{
+    
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.04);;
+}
+
+
+//头部
+
+.head{
+    height: (131rem / @baseFont);
+    padding: 0 (34rem / @baseFont) 0 (38rem / @baseFont);
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+.head-logo{
+        width: (80rem / @baseFont);
+        height: (80rem / @baseFont);
+        vertical-align: middle;
+        text-align: center;
+        margin-right: (15rem / @baseFont);
+    img{
+        width: (61rem / @baseFont);
+        height: (61rem / @baseFont);
+    }
+}
+.head-title{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: justify;
+    h2{
+        padding-right: 0%;
+        width: (573rem / @baseFont);
+        height: (62rem / @baseFont);
+        font-size: (41rem / @baseFont);
+        font-weight: 500;
+    }
+    p{
+        padding-right: 0%;
+        width: (573rem / @baseFont);
+        height: (47rem / @baseFont);
+        font-size: (30rem / @baseFont);
+        color: #808080;
+        font-weight: 345;
+    }
+}
+.head-load{
+    width:(218rem / @baseFont) ;
+    height: (62rem / @baseFont);
+    line-height: 2;
+    text-align: center;
+    margin-right:(10rem / @baseFont);
+    color: #575656;
+    font-size: (34rem / @baseFont);
+    font-weight: 300;
+    border: 1px solid #dfdfdf;
+    border-radius: (99rem / @baseFont);
+}
+
+
+//推荐排行
+
+
+.second-head{
+    display: flex;
+    flex: left;
+    height: (109rem / @baseFont);
+    text-align: center;
+    line-height: 2.4;
+    color: #1A1A1A80;
+    font-weight: 300;
+}
+.recommend{
+    font-size: (41.3rem / @baseFont);
+    width: 50%;
+    position: relative;
+    /*div{
+        width: (41.3rem / @baseFont);
+        height: (10.3rem / @baseFont);
+        position: absolute;
+        bottom: 0%;
+        background-color:#22D59C ;
+    }*/
+}
+.ranking{
+    font-size: (41.3rem / @baseFont);
+    width: 50%;
+}
+
+
+//搜索
+
+.research{
+    width:100% ;
+    height:(78rem / @baseFont) ;
+    margin-top: (41.3rem / @baseFont);
+    position: relative;
+    span{
+        width: (156rem / @baseFont);
+        height: (78rem / @baseFont);
+        position: absolute;
+        right:-4%;
+        top:4%;
+        color: #1A1A1A;
+        font-size: (36.4rem / @baseFont);
+        padding: 0rem (41.7rem / @baseFont);
+        font-weight: bold;
+        text-align: center;
+        line-height: 2;
+    }
+}
+.search-bar{
+    border: none;
+    outline: none;
+    width: (735rem / @baseFont);
+    height: (78rem / @baseFont);
+    padding: (12.9rem / @baseFont) 0rem (10.5rem / @baseFont) (62.3rem / @baseFont);
+    position:absolute;
+    left: (42rem / @baseFont);
+    text-align: center;
+    font-size:x-large;
+    font-weight: 200;
+    color: #8c8c8c;
+    border-radius: (38rem / @baseFont) (38rem / @baseFont) (38rem / @baseFont) (38rem / @baseFont);
+}
+.search-bar2{
+    border: none;
+    outline: none;
+    width: (735rem / @baseFont);
+    height: (78rem / @baseFont);
+    padding: (12.9rem / @baseFont) 0rem (10.5rem / @baseFont) (62.3rem / @baseFont);
+    position:absolute;
+    left: (42rem / @baseFont);
+    font-size:x-large;
+    font-weight: 200;
+    color: #8c8c8c;
+    border-radius: (38rem / @baseFont) (38rem / @baseFont) (38rem / @baseFont) (38rem / @baseFont);
+}
+.search1{
+    img{
+        position: absolute;
+        top: (13rem / @baseFont);
+        left: (325rem / @baseFont);
+        width: (55.3rem / @baseFont);
+        height: (53rem / @baseFont);
+   }
+}
+.search2{
+    img{
+        position: absolute;
+        top: (13rem / @baseFont);
+        left: (40rem / @baseFont);
+        width: (55.3rem / @baseFont);
+        height: (53rem / @baseFont);
+   }
+   
+}
+.chacha{
+    position: absolute;
+    right: (289rem / @baseFont);
+    top:(14rem / @baseFont);
+    z-index: 1;
+
+}
+
+
+//歌曲列表展示
+.songsShow{
+    margin-top: (47rem / @baseFont);
+}
+
+
+
+//搜索内容（搜索历史+热门搜索）
+
+.hotSearch1{
+    position: relative;
+}
+.dustbin{
+    width: (41.6rem / @baseFont);
+        height: (41.6rem / @baseFont);
+        margin: (31.2rem / @baseFont);
+        position: absolute;
+        top: -10%;
+        right: 0%;
+        text-align: center;
+        line-height: 0.75;
+        img{
+            width: (33.8rem / @baseFont);
+            height: (35rem / @baseFont);
+        }
+}
+.hisSearch{
+        width: (891rem / @baseFont);
+       // height: (354.4rem / @baseFont);
+        color: #1A1A1A;
+        font-size: (37.3rem / @baseFont);
+        margin: (41.5rem / @baseFont) (41.5rem / @baseFont) (31.2rem / @baseFont);
+        position: relative;
+}
+
+.hotSearch-title{
+    width: (891rem / @baseFont);
+    height: (54.4rem / @baseFont);
+    color: #1A1A1A;
+    font-size: (37.3rem / @baseFont);
+    margin: (41.5rem / @baseFont) (41.5rem / @baseFont) (31.2rem / @baseFont);
+}
+.hotSearch-content{
+    width: (891rem / @baseFont);
+    margin: 0rem (41.5rem / @baseFont);
+}
+
+
+
+//底部栏
+
+.copyright{
+    width: (974rem / @baseFont);
+    height: (260rem / @baseFont);
+    margin: (78rem / @baseFont) 0rem 0rem;
+    padding: (41.6rem / @baseFont) 0rem;
+    text-align: center;
+     img{
+      width: (206.7rem / @baseFont);
+      height: (57rem / @baseFont);
+      margin-bottom:(15rem / @baseFont);
+    }
+    p{
+        width: (974rem / @baseFont);
+        height:(46.7rem / @baseFont);
+        font-size:(31.2rem / @baseFont);
+        font-weight: 300;
+        color: #1A1A1A;
+    }
+}
+.load-QQmusic{
+    width: (974rem / @baseFont);
+    height: (200rem / @baseFont);
+   // padding: (41.5rem / @baseFont);
+    a{   
+         display: block;
+         width: (533rem / @baseFont);
+         height: (117rem / @baseFont);
+         position: relative;
+         left: 23%;
+         border-radius: (200rem / @baseFont);
+         box-shadow: 0 3px 25px rgb(0 0 0 / 5%);
+         
+        p{
+             width: (373.7rem / @baseFont);
+             height: (46.7rem / @baseFont);
+             color: #1A1A1A;
+             font-size: (31.2rem / @baseFont);
+             font-weight: 300;
+             position: absolute;
+             top: 30%;
+             left: 20%;
+        }
+        div{
+            width:(57.1rem / @baseFont) ;
+            height: (57.1rem / @baseFont);
+            position: absolute;
+            left: 5%;
+            top: 20%;
+            img{
+            width: (57rem / @baseFont);
+            height: (57rem / @baseFont);
+         }
+        }
+        
+    }
+}

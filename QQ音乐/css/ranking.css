@@ -1,0 +1,219 @@
+html {
+  font-size: 50px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 22.5px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 23.4375px;
+  }
+}
+@media screen and (min-width: 384px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 25.875px;
+  }
+}
+@media screen and (min-width: 424px) {
+  html {
+    font-size: 26.5px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 33.75px;
+  }
+}
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 46.875px;
+  }
+}
+body {
+  min-width: 320px;
+  height: 15rem;
+  margin: 0 auto;
+  font-family: -apple-system, sans-serif;
+  background: #fafafa;
+}
+.all-Head {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.04);
+}
+.head {
+  height: 2.62rem;
+  padding: 0 0.68rem 0 0.76rem;
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
+.head-logo {
+  width: 1.6rem;
+  height: 1.6rem;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 0.3rem;
+}
+.head-logo img {
+  width: 1.22rem;
+  height: 1.22rem;
+}
+.head-title {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+}
+.head-title h2 {
+  padding-right: 0%;
+  width: 11.46rem;
+  height: 1.24rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+.head-title p {
+  padding-right: 0%;
+  width: 11.46rem;
+  height: 0.94rem;
+  font-size: 0.6rem;
+  color: #808080;
+  font-weight: 345;
+}
+.head-load {
+  width: 4.36rem;
+  height: 1.24rem;
+  line-height: 2;
+  text-align: center;
+  margin-right: 0.2rem;
+  color: #575656;
+  font-size: 0.68rem;
+  font-weight: 300;
+  border: 1px solid #dfdfdf;
+  border-radius: 1.98rem;
+}
+.second-head {
+  display: flex;
+  flex: left;
+  height: 2.18rem;
+  text-align: center;
+  line-height: 2.4;
+  color: #1A1A1A80;
+  font-weight: 300;
+}
+.recommend {
+  font-size: 0.826rem;
+  width: 50%;
+}
+.ranking {
+  font-size: 0.826rem;
+  width: 50%;
+}
+.rankingList {
+  margin-top: 1.04rem;
+}
+.rankingList li {
+  width: 17.82rem;
+  height: 5.56rem;
+  background: #FFFFFF;
+  margin: 0rem 0.83rem 0.624rem;
+  list-style: none;
+  position: relative;
+}
+.rankingList li h2 {
+  width: 11.018rem;
+  height: 1.142rem;
+  color: #000000;
+  font-size: 0.83rem;
+  margin: 0rem 0.624rem 0.21rem;
+}
+.rankingList li img {
+  width: 5.56rem;
+  height: 5.56rem;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  border-radius: 0rem 0.48rem 0.48rem 0rem;
+}
+.rankingList li ol {
+  width: 12.258rem;
+  height: 2.98rem;
+  font-size: 65%;
+}
+.copyright {
+  width: 19.48rem;
+  height: 5.2rem;
+  margin: 1.56rem 0rem 0rem;
+  padding: 0.832rem 0rem;
+  text-align: center;
+}
+.copyright img {
+  width: 4.134rem;
+  height: 1.14rem;
+  margin-bottom: 0.3rem;
+}
+.copyright p {
+  width: 19.48rem;
+  height: 0.934rem;
+  font-size: 0.624rem;
+  font-weight: 300;
+  color: #1A1A1A;
+}
+.load-QQmusic {
+  width: 19.48rem;
+  height: 4rem;
+}
+.load-QQmusic a {
+  display: block;
+  width: 10.66rem;
+  height: 2.34rem;
+  position: relative;
+  left: 23%;
+  border-radius: 4rem;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.05);
+}
+.load-QQmusic a p {
+  width: 7.474rem;
+  height: 0.934rem;
+  color: #1A1A1A;
+  font-size: 0.624rem;
+  font-weight: 300;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.load-QQmusic a div {
+  width: 1.142rem;
+  height: 1.142rem;
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+.load-QQmusic a div img {
+  width: 1.14rem;
+  height: 1.14rem;
+}
